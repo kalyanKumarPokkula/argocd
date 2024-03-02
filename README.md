@@ -27,14 +27,12 @@ change the type clusterIP to NodePort
 
 ```
 minikube service argocd-server -n argocd
-
 ```
 
 or
 
 ```
 kubectl port-forward svc/argocd-server -n argocd 8080:443
-
 ```
 
 ### getting the argocd-initial-admin-secret password for the secret service
@@ -52,3 +50,9 @@ kubectl edit secret argocd-initial-admin-secret -n argocd
 ```
 echo password | base64 --decode
 ```
+
+### username of is admin
+
+### password of is decoded password
+
+after login in to the argocd create a repository and application
